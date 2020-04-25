@@ -1,7 +1,11 @@
 
 # README
 
-Basic scaffold code for image classification using Pytorch Lightning.
+Basic scaffold code for image classification using Pytorch Lightning. Largely adapted from:
+
+https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pl_examples/domain_templates/imagenet.py
+
+But made up and running with basic torchvision datasets and ImageFolder dataset loader.
 
 ### Dependencies
 - pytorch (1.5.0)

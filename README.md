@@ -39,12 +39,12 @@ python run.py -p examples -c mnist_cpu
 
 GPU (single GPU) support.
 ```bash
-python run.py -p examples -c mnist_cpu
+python run.py -p examples -c mnist_gpu1
 ```
 
 GPU (multi-GPU) support (using DDP)
 ```bash
-python run.py -p examples -c mnist_cpu
+python run.py -p examples -c mnist_gpu4
 ```
 
 ### CIFAR10 Image Classification
@@ -55,10 +55,10 @@ python run.py -p examples -c cifar10_cpu
 
 GPU (single GPU) support.
 ```bash
-python run.py -p examples -c cifar10_cpu
+python run.py -p examples -c cifar10_gpu1
 ```
 
 GPU (multi-GPU) support (using DDP)
 ```bash
-python run.py -p examples -c cifar10_cpu
+python run.py -p examples -c cifar10_gpu4
 ```

@@ -5,7 +5,7 @@ Basic scaffold code for image classification using Pytorch Lightning. Largely ad
 
 https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pl_examples/domain_templates/imagenet.py
 
-But made up and running with basic torchvision datasets and ImageFolder dataset loader.
+but with out-the-block MNIST, CIFAR10, and ImageFolder datasets in torchvision for posterity. You may need to change the data path in the configs to point to where you have MNIST / CIFAR10 downloaded (else, set download=True in the DataLoader).
 
 ### Dependencies
 - pytorch (1.5.0)

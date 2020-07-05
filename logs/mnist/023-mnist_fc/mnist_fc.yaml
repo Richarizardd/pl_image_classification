@@ -1,0 +1,33 @@
+opt:
+  net_arch: mnist_fc
+  lr: 0.001
+  wd: 0.0005
+  dataset: mnist
+  data_path: ~/awesomePhD/Datasets/
+  batch_size: 16
+  seed: 2020
+
+  num_workers: 4
+  num_class: 10
+
+trainer_opt:
+  gpus: 0
+  max_epochs: 10
+  precision: 32
+  min_epochs: 1
+  log_save_interval: 5
+  num_sanity_val_steps: 5
+  early_stop_callback: False
+  train_percent_check: 1.0
+  val_percent_check: 1.0
+  deterministic: True
+#  distributed_backend: ddp
+
+logging_opt:
+  save_dir: ./logs/
+  name: mnist
+  version: mnist_fc
+
+ckpt_opt:
+  save_top_k: -1
+  period: 5

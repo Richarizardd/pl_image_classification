@@ -5,23 +5,25 @@ Basic scaffold code for image classification using Pytorch Lightning.
 
 ### Dependencies
 - pytorch (1.5.0)
-- pytorch_lightning (0.7.3)
+- pytorch_lightning (0.8.4)
 
 ### GitHub Code Organization
 ```bash
 ./
 ├── configs
-      └── examples
-            ├── mnist_cpu.yaml
+      └── mnist
+            ├── mnist_fc.yaml
+            ├── mnist_cnn.yaml
             ├── mnist_gpu1.yaml
-            ├── mnist_gpu4.yaml
             ├── ...
-      └── EXPERIMENT NAME
+      └── cifar10
             ├── ...
 └── logs
-      └── examples
-            ├── version_mnist_cpu
+      └── mnist
+            ├── 000-mnist_fc
                 ├── ...
+            ├── 001-mnist_cnn
+            	├── ...
             ├── ...
 ```
 **configs** directory contains your list of experiment folders. Under each experiment, is a list of config yaml files (contains all of your arguments). Results from your experiments should be in **logs**. 
@@ -32,33 +34,12 @@ python run.py -p EXPERIMENT NAME -c CONFIG YAML NAME
 ```
 
 ### MNIST Image Classification
-CPU spport.
+FC layers.
 ```bash
-python run.py -p examples -c mnist_cpu
+python run.py -p mnist -c mnist_fc
 ```
 
-GPU (single GPU) support.
+CNN layers
 ```bash
-python run.py -p examples -c mnist_gpu1
-```
-
-GPU (multi-GPU) support (using DDP)
-```bash
-python run.py -p examples -c mnist_gpu4
-```
-
-### CIFAR10 Image Classification
-CPU spport.
-```bash
-python run.py -p examples -c cifar10_cpu
-```
-
-GPU (single GPU) support.
-```bash
-python run.py -p examples -c cifar10_gpu1
-```
-
-GPU (multi-GPU) support (using DDP)
-```bash
-python run.py -p examples -c cifar10_gpu4
+python run.py -p mnist -c mnist_fc
 ```

@@ -10,6 +10,7 @@ but with out-the-block MNIST, CIFAR10, and ImageFolder datasets in torchvision f
 ### Dependencies
 - pytorch (1.5.0)
 - pytorch_lightning (0.8.4)
+- tensorboard (2.1.1)
 
 ### GitHub Code Organization
 ```bash
@@ -35,6 +36,11 @@ but with out-the-block MNIST, CIFAR10, and ImageFolder datasets in torchvision f
 To run:
 ```bash
 python run.py -p EXPERIMENT NAME -c CONFIG YAML NAME
+```
+
+To start Tensorboard:
+```bash
+tensorboard --logdir ./
 ```
 
 ### MNIST Image Classification
